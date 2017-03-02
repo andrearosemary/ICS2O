@@ -1,0 +1,46 @@
+body {
+  background-color: maroon;
+  color:white;
+  }
+
+h1 { 
+  background-color: black;
+  border: 5px solid black;
+  text-align: center;
+  }
+
+h3, h5 {
+	text-align: center;
+	text-decoration: underline;
+}
+  
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+  
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: black;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+
+
+
