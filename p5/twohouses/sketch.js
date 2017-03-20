@@ -10,9 +10,8 @@ function setup() {
 
 var houseW = 100;
 var houseH = 80;
-var doorW = 26;
 
-var doorH = 39;
+
 function draw() {
   //sky
     background(175, 224, 250);
@@ -33,12 +32,14 @@ function draw() {
     
     //house 1 door
     fill(46, 37, 21);
-    rect(91, 309, doorW, doorH);
+    rect(91, 309, houseW/4, houseW/2);
     
-    
+    var houseW = 70
+	var houseH = 50
+	
     //house 2 main
     fill(194, 110, 37);
-    rect(183, 188, houseW+100, houseH+80);
+    rect(56, 269, houseW, houseH);
     
     //house 2 roof
     fill(51, 7, 7);
@@ -46,5 +47,5 @@ function draw() {
     
     //house 2 door
     fill(46, 37, 21);
-    rect(257, 269, doorW+26, doorH+39);
+    rect(91, 309, houseW/4, houseW/2);
 }
