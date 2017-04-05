@@ -1,6 +1,6 @@
 /*Friction and Gravity
 Andrea Thompson
-2017-04-04*/
+2017-04-04 - 2017-04-05*/
 
 var GposX = 640;
 var GposY = 0;
