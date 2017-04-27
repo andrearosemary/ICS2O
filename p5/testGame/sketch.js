@@ -1,6 +1,6 @@
 /*Test Game
 Andrea Thompson
-2017-04-13*/
+2017-04-13 - 2017-04-19*/
 
 var scoreA = 0;
 var scoreB = 0;
