@@ -108,9 +108,7 @@ function draw() {
 	
  }
 	
-if(scoreA >= 10 || scoreB >= 10) {
-	posX = 666;
-	posY = 666;
+
 }
 function mouseClicked() { //if the mouse is clicked, the player serves
 	speedX = 4;
