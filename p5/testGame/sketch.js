@@ -107,8 +107,6 @@ function draw() {
 	 text("YOU LOSE!", 240, 65);
 	
  }
-	
-
 }
 function mouseClicked() { //if the mouse is clicked, the player serves
 	speedX = 4;
