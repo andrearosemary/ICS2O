@@ -2,7 +2,7 @@
 Andrea Thompson
 2017-05-11 */
 
-var rectSize = 100; //variable for circle diameter and rectangle width
+/*var rectSize = 100; //variable for circle diameter and rectangle width
 
 var squareY = 600; //the Y-position of the squares
 
@@ -11,7 +11,7 @@ var posGreen = 350;//variable for the X-position of the green rectangle
 var posPink = 450; //variable for the X-position of the pink rectangle
 var posYellow = 550; //variable for the X-position of the yellow rectangle
 
-var speed = 5; //speed the circles go down the screen
+var speed = 5; //speed the circles go down the screen*/
 
 	
 
@@ -26,7 +26,7 @@ function draw() {
   background(0);
   textSize(100);
   
-  stroke(120, 120, 120);
+ /* stroke(120, 120, 120);
   fill(200, 200, 200);
   rect(posBlue, 0, 400, 100);
   
@@ -81,11 +81,11 @@ function draw() {
   blueCircle();
   greenCircle();
   pinkCircle();
-  yellowCircle();
+  yellowCircle();*/
 }
 
 
-function blueCircle() { //function for blue circles
+/*function blueCircle() { //function for blue circles
 	
 	var bCircle = 300; //local variable for the moving blue circles
 	
@@ -144,4 +144,4 @@ function yellowCircle() { //function for yellow circles
 	fill(255, 250, 230);
 	ellipse(yCircle, 100, rectSize/4, rectSize/4); //inner circle
 
-}
+}*/
