@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<title> Musical Instrument </title> 
+	
+	<style>
+	
+	body {
+	background-color:blue;
+	color:white;}
+	
+	h1 {
+	text-align:center;}
+	
+	</style>
+	
+</head>
+
+<body>
+
+	<h1> Musical Instrument Assignment </h1>
+	
+	<p> The goal of this assignment was to create a musical instrument using the Audrino Uno. After a lot of hardwork, I've created an instrument simular to a xylophone. Each induvidual key, which are made with paper clips are lined up across the bread board. When the positively charged paperclip hits one of the keys, a noise is made. The following is the code for the instrument: </p>
+	
+	<p>/*Musical Instrument
+ * Andrea Thompson
+ * 2017/05/24 - 2017/05/31
+ */
+
+//variables for each note
+int C = 130.81;
+int D = 146.83;
+int E = 164.81;
+int F = 174.61;
+int G = 196.00;
+int A = 220.00;
+int B = 246.94;
+
+//variables for each key
+int cKey = 4;
+int dKey = 5;
+int eKey = 6;
+int fKey = 7;
+int gKey = 8;
+int aKey = 9;
+int bKey = 10;
+
+//variables for POT
+int potPin = 0; //pot is in A0
+int potValue; //holds the value of pot
+
+//variables for speaker
+int speakerPin = 13;
+int T = 30; //time variable
+
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(cKey, INPUT);
+  pinMode(dKey, INPUT);
+  pinMode(eKey, INPUT);
+  pinMode(fKey, INPUT);
+  pinMode(gKey, INPUT);
+  pinMode(aKey, INPUT);
+  pinMode(bKey, INPUT);
+
+  pinMode(speakerPin, OUTPUT);
+}
+
+void loop() {
+  potValue = analogRead(potPin);
+  
+  if(potValue <= 341) { //if the POT switch is in position, the notes will be in octave 2
+    C = 65.405;
+    D = 73.415;
+    E = 82.405;
+    F = 87.305;
+    G = 98.00;
+    A = 110.00;
+    B = 123.47;
+  }
+  else if((potValue >= 341) && (potValue <= 682)) { //if the POT switch is in position, the notes will be in octave 3
+    C = 130.81;
+    D = 146.83;
+    E = 164.81;
+    F = 174.61;
+    G = 196.00;
+    A = 220.00;
+    B = 246.94;
+  }
+  else{ //if the POT switch is in position, the notes will be in octave 4
+    C = 261.62;
+    D = 293.66;
+    E = 329.62;
+    F = 349.22;
+    G = 392.00;
+    A = 440.00;
+    B = 493.88;
+  }
+
+  if(digitalRead(cKey) == HIGH) {
+    tone(speakerPin, C, T);
+  }
+  if(digitalRead(dKey) == HIGH) {
+    tone(speakerPin, D, T);
+  }
+  if(digitalRead(eKey) == HIGH) {
+    tone(speakerPin, E, T);
+  }
+  if(digitalRead(fKey) == HIGH) {
+    tone(speakerPin, F, T);
+  }
+  if(digitalRead(gKey) == HIGH) {
+    tone(speakerPin, G, T);
+  }
+  if(digitalRead(aKey) == HIGH) {
+    tone(speakerPin, A, T);
+  }
+  if(digitalRead(bKey) == HIGH) {
+    tone(speakerPin, B, T);
+  }
+
+ delay(T);
+
+
+}
+	</p>
+</body>
+</html>
+
