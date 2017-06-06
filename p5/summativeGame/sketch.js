@@ -120,11 +120,11 @@ function draw() {
 		  yellowCircle();
 		  yCircle = yCircle + speed;
 	  }
-	  if(score >= 3000) { //if the player reaches a score of 3000, the game gets faster
+	  if(score >= 2500) { //if the player reaches a score of 2500, the game gets faster
 		  speed = speed + 0.005;
 		  
-	  } //if the player reaches a score of 400, the game gets even faster
-	  if(score >= 4500) {
+	  } //if the player reaches a score of 4000, the game gets even faster
+	  if(score >= 4000) {
 		  speed = speed + 0.004;
 	  }
 	  
@@ -135,7 +135,18 @@ function draw() {
 		  posPink = 10000; //pink circle and rect go off screen
 		  posYellow = 10000;  //yellow circle and rect go off screen
 		  
-		  text("Your score is " + score, 300, 400);
+		  text("Good job!", 300, 350);
+		  text("Your score is " + score + "!", 300, 400);
+		  text("My highscore is 5870!", 300, 450);
+		  
+		  if(score < 5870) {
+			  text("Try to beat me next time!", 300, 500);
+			  
+		  } else if (score > 5870) {
+			  text("You beat me! Good job!", 300, 500);
+		  } else {
+			  text("We tied!", 300, 500);
+		  }
 	  }
   }
   
