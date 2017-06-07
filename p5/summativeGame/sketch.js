@@ -27,10 +27,18 @@ var startTime; //variable that stores at how many milliseconds after the program
 
 var status = 0; //when status is equal to one, the gamwe will begin
 
+var music; //variable for music
 
+function preload() {
+music = loadSound('technological.mp3');  // Loads the sound file into the variable
+
+}
 function setup() {
   createCanvas(950, 800);
   frameRate(30);
+	
+  music.setVolume(0.1);
+  music.play()
 }
 
 function draw() {
