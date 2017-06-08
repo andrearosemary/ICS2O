@@ -67,7 +67,7 @@ function setup() {
 function draw() {
   
  if ((music.isPlaying() == false) && (userStop == false)) {  // if the music has stopped playing, play it again
-    music.play()
+    music.play();
  }
 	
   background(0);
