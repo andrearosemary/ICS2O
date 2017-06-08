@@ -184,22 +184,56 @@ function draw() {
   }
   
   
-  
-  if(bCircle >= 800){
+  if(bCircle >= 700){ //if the blue ball goes past the square, the center turns gray
+	  blueR = 15;
+	  blueG = 15;
+	  blueB = 15;
+  }
+  if(gCircle >= 700){ //if the green ball goes past the square, the center turns gray
+	  greenR = 15;
+	  greenG = 15;
+	  greenB = 15;
+  }
+  if(pCircle >= 700){ //if the pink ball goes past the square, the center turns pink
+	  pinkR = 15;
+	  pinkG = 15;
+	  pinkB = 15;
+  }
+  if(yCircle >= 700){ //if the yellow ball goes past the square, the center turns yellow
+	  yellowR = 15;
+	  yellowG = 15;
+	  yellowB = 15;
+  }	
+
+
+	
+  if(bCircle >= 800){ //when the ball goes off the screen, it will return to the top
 	 bCircle = 100;
 	 score = score -10;
+	 blueR = 230;
+	 blueG = 240;
+	 blueB = 255;
   }
   if(gCircle >= 800) {
 	 gCircle = 100;
 	 score = score -10;
+	 greenR = 230;
+	 greenG = 255;
+         greenB = 240; 
   }
   if(pCircle >= 800) {
 	 pCircle = 100;
 	 score = score -10;
+	 pinkR = 255;
+	 pinkG = 240;
+	 pinkB = 230; 
   }
   if(yCircle >= 800) {
 	 yCircle = 100;
 	 score = score -10
+	 yellowR = 255;
+	 yellowG = 250;
+	 yellowB = 230;  
   }
   
   
