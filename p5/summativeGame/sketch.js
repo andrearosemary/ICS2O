@@ -27,7 +27,7 @@ var startTime; //variable that stores at how many milliseconds after the program
 
 var status = 0; //when status is equal to one, the gamwe will begin
 
-var textX = 50; //the X value of the text in the left margin
+var textX = 25; //the X value of the text in the left margin
 
 var music; //variable for music
 
@@ -178,12 +178,12 @@ function draw() {
 		  
 		  text("Good job!", 300, 350);
 		  text("Your score is " + score + "!", 300, 400);
-		  text("My highscore is 5870!", 300, 450);
+		  text("My highscore is 6200!", 300, 450);
 		  
-		  if(score < 5870) {
+		  if(score < 6200) {
 			  text("Try to beat me next time!", 300, 500);
 			  
-		  } else if (score > 5870) {
+		  } else if (score > 6200) {
 			  text("You beat me! Good job!", 300, 500);
 		  } else {
 			  text("We tied!", 300, 500);
