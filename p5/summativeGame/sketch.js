@@ -38,7 +38,7 @@ function setup() {
   frameRate(30);
 	
   music.setVolume(0.1);
-  music.play()
+  music.play();
 }
 
 function draw() {
