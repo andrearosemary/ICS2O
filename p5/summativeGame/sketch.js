@@ -27,7 +27,7 @@ var startTime; //variable that stores at how many milliseconds after the program
 
 var status = 0; //when status is equal to one, the gamwe will begin
 
-var textX = 25; //the X value of the text in the left margin
+var textX = 15; //the X value of the text in the left margin
 
 var music; //variable for music
 
