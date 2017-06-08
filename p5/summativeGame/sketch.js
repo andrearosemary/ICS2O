@@ -27,6 +27,8 @@ var startTime; //variable that stores at how many milliseconds after the program
 
 var status = 0; //when status is equal to one, the gamwe will begin
 
+var textX = 50; //the X value of the text in the left margin
+
 var music; //variable for music
 
 
@@ -143,6 +145,7 @@ function draw() {
 	  if((millis() - startTime) >= 15500 ){ //after 15.5 seconds, the first pink circle will appear
 		pinkCircle();
 		pCircle = pCircle + speed;
+		text("Good Start!", textX, 150);
 		}
 		 
 	  if((millis() - startTime) >= 22300) { //after 22.3 seconds, the first green circle will appear
@@ -152,13 +155,16 @@ function draw() {
 	  if((millis () - startTime) >= 31700) { // after 31.7 seconds, the first yellow circle will appear
 		  yellowCircle();
 		  yCircle = yCircle + speed;
+		  text("Keep going!", textX, 200);
 	  }
 	  if(score >= 2500) { //if the player reaches a score of 2500, the game gets faster
 		  speed = speed + 0.005;
+		  text("You're doing great!", textX, 250);
 		  
 	  } //if the player reaches a score of 4000, the game gets even faster
 	  if(score >= 4000) {
 		  speed = speed + 0.004;
+		  text("You're amazing!", textX, 300);
 	  }
 	  
 	  if((millis() - startTime) >= 90000) { //game will end after a minute and a half
@@ -167,6 +173,8 @@ function draw() {
 		  posGreen = 10000; //green circle and rect go off screen
 		  posPink = 10000; //pink circle and rect go off screen
 		  posYellow = 10000;  //yellow circle and rect go off screen
+		  
+		  textX = 10000; //text goes offscreen
 		  
 		  text("Good job!", 300, 350);
 		  text("Your score is " + score + "!", 300, 400);
