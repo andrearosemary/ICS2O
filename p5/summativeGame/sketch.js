@@ -30,7 +30,7 @@ var status = 0; //when status is equal to one, the gamwe will begin
 var music; //variable for music
 
 function preload() {
-music = loadSound('techological.mp3');  // Loads the sound file into the variable
+	music = loadSound('techological.mp3');  // Loads the sound file into the variable
 
 }
 function setup() {
@@ -43,6 +43,10 @@ function setup() {
 
 function draw() {
   
+ if ((music.isPlaying() == false) && (userStop == false)) {  // if the music has stopped playing, play it again
+    music.play()
+ }
+	
   background(0);
   textSize(100);
   
