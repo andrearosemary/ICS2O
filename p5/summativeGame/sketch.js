@@ -159,7 +159,7 @@ function draw() {
 	  }
 	  if(score >= 2500) { //if the player reaches a score of 2500, the game gets faster
 		  speed = speed + 0.005;
-		  text("You're doing great!", textX, 250);
+		  text("You're doing well!", textX, 250);
 		  
 	  } //if the player reaches a score of 4000, the game gets even faster
 	  if(score >= 4000) {
