@@ -29,6 +29,27 @@ var status = 0; //when status is equal to one, the gamwe will begin
 
 var music; //variable for music
 
+
+//variables for the inner colour of the circles
+
+var blueR = 230;
+var blueG = 240;
+var blueB = 255;
+
+var greenR = 230;
+var greenG = 255;
+var greenB = 240;
+
+var pinkR = 255;
+var pinkG = 240;
+var pinkB = 230;
+
+var yellowR = 255;
+var yellowG = 250;
+var yellowB = 230;
+
+
+
 function preload() {
 	music = loadSound('techological.mp3');  // Loads the sound file into the variable
 
@@ -241,7 +262,7 @@ function blueCircle() { //function for blue circles
 	fill(26, 117, 255);
 	ellipse(posBlue + 50, bCircle, rectSize/2, rectSize/2); //middle circle
 	
-	fill(230, 240, 255);
+	fill(blueR, blueG, blueB);
 	ellipse(posBlue + 50, bCircle, rectSize/4, rectSize/4); //inner circle
 	
 	
@@ -259,7 +280,7 @@ function greenCircle() { //function for green circles
 	fill(26, 255, 117);
 	ellipse(posGreen + 50, gCircle, rectSize/2, rectSize/2); //middle circle
 	
-	fill(230, 255, 240);
+	fill(greenR, greenG, greenB);
 	ellipse(posGreen + 50, gCircle, rectSize/4, rectSize/4); //inner circle
 }
 
@@ -273,7 +294,7 @@ function pinkCircle() { //function for pink circles
 	fill(255, 26, 117);
 	ellipse(posPink + 50, pCircle, rectSize/2, rectSize/2); //middle circle
 	
-	fill(255, 230, 240);
+	fill(pinkR, pinkG, pinkB);
 	ellipse(posPink + 50, pCircle, rectSize/4, rectSize/4); //inner circle
 }
 
@@ -287,7 +308,7 @@ function yellowCircle() { //function for yellow circles
 	fill(255, 209, 26);
 	ellipse(posYellow + 50, yCircle, rectSize/2, rectSize/2); //middle circle
 	
-	fill(255, 250, 230);
+	fill(yellowR, yellowG, yellowB);
 	ellipse(posYellow + 50, yCircle, rectSize/4, rectSize/4); //inner circle
 
 }
