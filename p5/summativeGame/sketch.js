@@ -30,7 +30,7 @@ var status = 0; //when status is equal to one, the gamwe will begin
 var music; //variable for music
 
 function preload() {
-music = loadSound('technological.mp3');  // Loads the sound file into the variable
+music = loadSound('techological.mp3');  // Loads the sound file into the variable
 
 }
 function setup() {
