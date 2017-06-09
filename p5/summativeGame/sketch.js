@@ -32,9 +32,9 @@ var textX = 15; //the X value of the text in the left margin
 var music; //variable for music
 
 var c; //variable for C that will play when blue note is hit
-var d; //variavle for D that will play when green note is hit
-var e; //variable for E that will play when pink note is hit
-var f //variavle for F that will play when yellow note is hit
+var e; //variavle for E that will play when green note is hit
+var g; //variable for G that will play when pink note is hit
+var b //variavle for B that will play when yellow note is hit
 
 
 //variables for the inner colour of the circles
@@ -59,6 +59,10 @@ var yellowB = 230;
 
 function preload() {
 	music = loadSound('techological.mp3');  // Loads the sound file into the variable
+	c = loadSound('c5.mp3'); 
+	e = loadSound('e5.mp3');
+	g = loadSound('g5.mp3');
+	b = loadSound('b5.mp3');
 
 }
 function setup() {
@@ -67,6 +71,11 @@ function setup() {
 	
   music.setVolume(0.1);
   music.play();
+  c.setVolume(0.1);
+  e.setVolume(0.1);
+  g.setVolume(0.1);
+  b.setVolume(0.1);
+	
 }
 
 function draw() {
@@ -269,6 +278,7 @@ function keyPressed() {
 		if((bCircle >= squareY) && (bCircle <= squareY + rectSize)){ //if there is a blue circle, give the player 100 points
 			score = score + 100;
 			bCircle = -40;
+			c.play();
 		} else { //if there isnt a blue circle, take away ten points
 			score = score - 10;
 		}
@@ -276,6 +286,7 @@ function keyPressed() {
 		if((gCircle >= squareY) && (gCircle <= squareY + rectSize)) { //if there is a green circle, give the player 100 points
 			score = score + 100;
 			gCircle = -300;
+			e.play();
 		} else { //if there isnt a green circle, take away ten points
 			score = score - 10;
 		}
@@ -283,6 +294,7 @@ function keyPressed() {
 		if((pCircle >= squareY) && (pCircle <= squareY + rectSize)) { //if there is a pink circle, give the player 100 points
 			score = score + 100;
 			pCircle = -400;
+			g.play();
 		} else {
 			score = score - 10; //if there isnt a pink circle, take away ten points
 		} 
@@ -290,6 +302,7 @@ function keyPressed() {
 		if((yCircle >= squareY) && (yCircle <= squareY + rectSize)) { //if there is a yellow circle, give the player 100 points
 			score = score + 100;
 			yCircle = -100;
+			b.play();
 		} else {
 			score = score - 10; //if there isnt a yellow circle, take away ten points
 		} 
