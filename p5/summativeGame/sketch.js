@@ -31,6 +31,11 @@ var textX = 15; //the X value of the text in the left margin
 
 var music; //variable for music
 
+var c; //variable for C that will play when blue note is hit
+var d; //variavle for D that will play when green note is hit
+var e; //variable for E that will play when pink note is hit
+var f //variavle for F that will play when yellow note is hit
+
 
 //variables for the inner colour of the circles
 
