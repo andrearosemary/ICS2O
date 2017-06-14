@@ -29,6 +29,10 @@ var status = 0; //when status is equal to one, the gamwe will begin
 
 var textX = 15; //the X value of the text in the left margin
 
+var coolMeterR = 0; //variable for the red part of the cool-o-meter
+var coolMeterG = 255;//variable for the green part of the cool-o-meter
+var coolMeterY = 375; // variable for the Y position of the top of the cool-o-meter line
+
 var music; //variable for music
 
 var c; //variable for C that will play when blue note is hit
@@ -210,21 +214,25 @@ function draw() {
 	  blueR = 15;
 	  blueG = 15;
 	  blueB = 15;
+	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
   }
   if(gCircle >= 700){ //if the green ball goes past the square, the center turns gray
 	  greenR = 15;
 	  greenG = 15;
 	  greenB = 15;
+	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
   }
   if(pCircle >= 700){ //if the pink ball goes past the square, the center turns pink
 	  pinkR = 15;
 	  pinkG = 15;
 	  pinkB = 15;
+	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
   }
   if(yCircle >= 700){ //if the yellow ball goes past the square, the center turns yellow
 	  yellowR = 15;
 	  yellowG = 15;
 	  yellowB = 15;
+	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
   }	
 
 
@@ -232,9 +240,10 @@ function draw() {
   if(bCircle >= 800){ //when the ball goes off the screen, it will return to the top
 	 bCircle = 100;
 	 score = score -10;
-	 blueR = 230;
+	 blueR = 230; //
 	 blueG = 240;
 	 blueB = 255;
+	  
   }
   if(gCircle >= 800) {
 	 gCircle = 100;
@@ -242,6 +251,7 @@ function draw() {
 	 greenR = 230;
 	 greenG = 255;
          greenB = 240; 
+	 
   }
   if(pCircle >= 800) {
 	 pCircle = 100;
@@ -249,6 +259,7 @@ function draw() {
 	 pinkR = 255;
 	 pinkG = 240;
 	 pinkB = 230; 
+	  
   }
   if(yCircle >= 800) {
 	 yCircle = 100;
@@ -256,8 +267,23 @@ function draw() {
 	 yellowR = 255;
 	 yellowG = 250;
 	 yellowB = 230;  
+	  
   }
   
+  text("COOL-O-METER", 700, 200); //COOL-O-METER title
+  rect(775, 250, 100, 500); //cool-o-meter rectangle
+  strokeWeight(50);
+  stroke(coolMeterR, coolMeterG, 0); 
+  line(850, 725, 850, coolMeterX); //line in ther middle of cool-o-meter
+  strokeWeight(10);
+	
+  if(coolMeterX < 375) {
+	  coolMeterR = 255;
+	  coolMeterG = 0;
+  } else {
+	  coolMeterR = 0;
+	  coolMeterG = 255;
+  }
   
   /*variable changes to make circles move
   bCircle = bCircle + speed;
@@ -279,6 +305,7 @@ function keyPressed() {
 			score = score + 100;
 			bCircle = -40;
 			c.play();
+			coolMeterX = coolMeterX + 10; //the cool-o-meter goes up
 		} else { //if there isnt a blue circle, take away ten points
 			score = score - 10;
 		}
@@ -287,6 +314,7 @@ function keyPressed() {
 			score = score + 100;
 			gCircle = -300;
 			e.play();
+			coolMeterX = coolMeterX + 10; //the cool-o-meter goes up
 		} else { //if there isnt a green circle, take away ten points
 			score = score - 10;
 		}
@@ -295,6 +323,7 @@ function keyPressed() {
 			score = score + 100;
 			pCircle = -400;
 			g.play();
+			coolMeterX = coolMeterX + 10; //the cool-o-meter goes up
 		} else {
 			score = score - 10; //if there isnt a pink circle, take away ten points
 		} 
@@ -303,6 +332,7 @@ function keyPressed() {
 			score = score + 100;
 			yCircle = -100;
 			b.play();
+			coolMeterX = coolMeterX + 10; //the cool-o-meter goes up
 		} else {
 			score = score - 10; //if there isnt a yellow circle, take away ten points
 		} 
