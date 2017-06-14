@@ -29,9 +29,7 @@ var status = 0; //when status is equal to one, the gamwe will begin
 
 var textX = 15; //the X value of the text in the left margin
 
-var coolMeterR = 0; //variable for the red part of the cool-o-meter
-var coolMeterG = 255;//variable for the green part of the cool-o-meter
-var coolMeterY = 375; // variable for the Y position of the top of the cool-o-meter line
+
 
 var music; //variable for music
 
@@ -214,25 +212,25 @@ function draw() {
 	  blueR = 15;
 	  blueG = 15;
 	  blueB = 15;
-	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
+	  
   }
   if(gCircle >= 700){ //if the green ball goes past the square, the center turns gray
 	  greenR = 15;
 	  greenG = 15;
 	  greenB = 15;
-	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
+	  
   }
   if(pCircle >= 700){ //if the pink ball goes past the square, the center turns pink
 	  pinkR = 15;
 	  pinkG = 15;
 	  pinkB = 15;
-	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
+	
   }
   if(yCircle >= 700){ //if the yellow ball goes past the square, the center turns yellow
 	  yellowR = 15;
 	  yellowG = 15;
 	  yellowB = 15;
-	  coolMeterX = coolMeterX - 10; //the cool-o-meter goes down
+	  
   }	
 
 
@@ -270,20 +268,7 @@ function draw() {
 	  
   }
   
-  text("COOL-O-METER", 700, 200); //COOL-O-METER title
-  rect(775, 250, 100, 500); //cool-o-meter rectangle
-  strokeWeight(50);
-  stroke(coolMeterR, coolMeterG, 0); 
-  line(850, 725, 850, coolMeterX); //line in ther middle of cool-o-meter
-  strokeWeight(10);
-	
-  if(coolMeterX < 375) {
-	  coolMeterR = 255;
-	  coolMeterG = 0;
-  } else {
-	  coolMeterR = 0;
-	  coolMeterG = 255;
-  }
+ 
   
   /*variable changes to make circles move
   bCircle = bCircle + speed;
